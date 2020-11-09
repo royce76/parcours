@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="formGroup">
+            <label for="movie">Le titre du film à chercher :</label>
+            <input type="text" name="movie" id="movie" placeholder="Votre film" required><!--for est lié a id donc for=movie focus sur id=movie-->
+        </div>
+        <div class="formGroup">
+            <label for="year">L'année du film à chercher :</label>
+            <input type="number" name="year" id="year" placeholder="année du film" min="1880" required>
+        </div>
+        <div class="formGroup">
+            <label for="vo">Version original :</label>
+            <input type="radio" name="version" id="vo" placeholder="Version original" checked required>
+            <label for="vf">Version française :</label>
+            <input type="radio" name="version" id="vf" placeholder="Version française" checked required>
+        </div>
+        <input type="submit" value="Rechercher">
+    </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice piscine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid bg-dark text-white">
+      <section class="container">
+        <h1 class="display-5">Exercice de la piscine en JavaScript <i class="fas fa-swimmer"></i></h1>
+        <p class="lead">Saurez-vous créer un objet piscine qui calcule son temps de remplissage selon ses dimensions ?</p>
+        <div class="float-right mr-5" id="timer"></div>
+      </section>
+    </header>
+
+    <main class="container mb-3">
+      <div class="row">
+        <aside class="col-sm-12 col-md-4">
+          <h3 class="font-weight-bold">Formulaire</h3>
+          <p class="font-italic">Remplissez ce formulaire pour obtenir le temps de remplissage de votre piscine</p>
+          <form>
+            <div class="form-group">
+              <label for="longueurInput">Longueur : </label>
+              <input type="number" class="form-control" id="longueurInput" placeholder="Entrez une longueur en mètres">
+            </div>
+            <div class="form-group">
+              <label for="largeurInput">Largeur : </label>
+              <input type="number" class="form-control" id="largeurInput" placeholder="Entrez une largeur en mètres">
+            </div>
+            <div class="form-group">
+              <label for="profondeurInput">Profondeur : </label>
+              <input type="number" class="form-control" id="profondeurInput" placeholder="Entrez une profondeur en mètres">
+            </div>
+            <div class="form-group">
+              <label for="debitInput">Débit : </label>
+              <input type="number" class="form-control" id="debitInput" placeholder="Entrez un débit en mètres cubes par minute">
+            </div>
+          </form>
+          <button type="submit" class="btn btn-dark" onclick="piscineManager.newPiscine()">Calculer</button>
+        </aside>
+        <section class="col-sm-12 col-md-8">
+          <div class="card">
+            <div class="card-body bg-light">
+              <h5 class="card-title text-center font-weight-bold">Informations sur votre piscine</h5>
+              <p class="card-text">Selon les informations rentrées, voici le temps de remplissage de votre piscine</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" id="longueur"></li>
+              <li class="list-group-item" id="largeur"></li>
+              <li class="list-group-item" id="profondeur"></li>
+              <li class="list-group-item" id="debit"></li>
+              <li class="list-group-item" id="result"></li>
+            </ul>
+            <div class="card-footer text-muted text-center">
+              Merci d'avoir utiliser notre site, contactez votre revendeur pour plus d'informations
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

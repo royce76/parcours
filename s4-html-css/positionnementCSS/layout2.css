@@ -1,0 +1,29 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+nav {
+    background-color: #00aaaa;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header {
+    height: 250px;
+    background-color: #56a134;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    display:flex;
+    justify-content: flex-end;
+}

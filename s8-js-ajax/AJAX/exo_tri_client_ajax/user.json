@@ -1,0 +1,8 @@
+{
+    "utilisateurs" :[
+        {"id": 1,"prenom": "Jason","nom": "vorheess","age": 40,"ville": "Crystal Lake"},
+        {"id": 2,"prenom": "Freddy","nom": "Krueger","age": 45,"ville": "Springwood"},
+        {"id": 3,"prenom": "Hannibal","nom": "Lecter","age": 59,"ville": "Baltimore"},
+        {"id": 4,"prenom": "Michael","nom": "Myers","age": 38,"ville": "Haddonfield"}
+    ]
+}

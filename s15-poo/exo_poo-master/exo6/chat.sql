@@ -1,0 +1,17 @@
+DROP DATABASE IF EXISTS chat;
+CREATE DATABASE chat CHARACTER SET "utf8";
+USE chat;
+
+CREATE TABLE Chat(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(15) NOT NULL,
+  age INT UNSIGNED NOT NULL,
+  sexe VARCHAR(10) NOT NULL,
+  color VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE=InnoDB;
+
+INSERT INTO chat (name,age,sexe,color)
+VALUES
+("bounty",3,"male","noir");

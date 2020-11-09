@@ -1,0 +1,31 @@
+.red {
+    background-color: #aa0000;
+}
+.blue {
+    background-color: #0000aa;
+}
+.green {
+    background-color: #00aa00;
+}
+main {
+    background-color: grey;
+    height:500px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+div {
+    width: 25%;
+    height: 400px;
+}
+div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* p{
+    width:300px;
+    display:inline-block /*modifie block in inline
+} */

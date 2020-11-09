@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: grey;
+    height:250px;
+    display:flex;
+}
+
+main {
+    background-color:#000000;/* seulement margin pour un main seuleemnt*/
+    width:95%;
+    margin:20px auto;
+    height: 600px;
+    display:flex;
+    justify-content: space-between;
+}
+
+section {
+    background-color: #aa0000;
+    width: 65%;
+}
+
+aside {
+    background-color: #00aa00;
+    width: 30%;
+}
+
+footer {
+    background-color:#0000aa;
+    height: 150px;
+}

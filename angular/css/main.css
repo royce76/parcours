@@ -1,0 +1,17 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: #00aa00;
+}
+.menu{
+    list-style-type: none;
+}
+nav ul li a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+#angularLink{
+    color:#aa0000;
+}

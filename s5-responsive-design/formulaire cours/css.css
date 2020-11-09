@@ -1,0 +1,14 @@
+form input {
+    display: block;
+}
+
+form input[type="radio"] {
+    display: inline;
+}
+/* #vo, #vf {
+    display: inline;
+} */
+
+#movie:valid {
+    border: 2px solid green;
+}
