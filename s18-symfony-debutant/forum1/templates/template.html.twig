@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <header class="jumbotron jumbotron-fluid bg-dark text-white">
+    <section class="container">
+      <h1 class="display-4">Forum</h1>
+      <p class="lead">Parlez de tout est n'importe quoi.</p>
+    </section>
+  </header>
+
+  <div class="container">
+    <div class="">
+      <ul class="nav row">
+        <li class="nav-item col-2">
+          <a class="nav-link btn btn-primary" href="{{ path("index")}}">Accueil</a>
+        </li>
+        <li class="nav-item col-2">
+          <a class="nav-link btn btn-primary" href="{{ path("rules")}}">Règles</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="container">
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="jumbotron jumbotron-fluid bg-dark text-white">
+    <section class="container">
+      <p class="lead">Tous droits réservés.</p>
+    </section>
+  </footer>
+{% endblock %}

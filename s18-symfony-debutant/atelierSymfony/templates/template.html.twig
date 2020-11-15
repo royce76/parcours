@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% block body %}
+{# <!-- Fichier qui hérite de la base --> #}
+<!-- On ouvre le bloc body du parent pour écrire notre template dedans -->
+  <header class="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+    <section class="container">
+      <h1 class="display-4">Forum Ada Lovelace</h1>
+      <p class="lead">Parlez de tout et n'importe quoi</p>
+      {# <!-- Si un utilisateur est connecté on affiche son nom --> #}
+      {% if app.user %}
+        <p>Bonjour {{app.user.username}}</p>
+      {% endif %}
+    </section>
+  </header>
+  <ul class="nav mt-0 bg-danger py-1">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{{ path("index") }}">Accueil</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{{ path("rules") }}">Règles</a>
+    </li>
+    {% if app.user %}
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{{ path("user_subjects") }}">Sujets</a>
+      </li>
+    {% endif %}
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{{ path("new_subject") }}">Nouveau sujet</a>
+    </li>
+    {# <!-- Si un utilisateur est connecté avec le rôle de base --> #}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{path('app_logout')}}" class="btn btn-dark">Deconnexion</a>
+    {% else %}
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{{ path("app_register") }}">S'inscrire</a>
+      </li>
+      <a href="{{path('app_login')}}" class="btn btn-dark">Connexion</a>
+    {% endif %}
+  </ul>
+
+  <main class="container my-5">
+    {# <!-- On crée un bloc main dans lequel on viendra écrire le cotnenu de nos pages --> #}
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+    <section class="container">
+      <p class="lead">Tous droits réservés</p>
+    </section>
+  </footer>
+{# <!-- On n'oublie pas de refermer le block body --> #}
+{% endblock %}
